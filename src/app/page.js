@@ -1,4 +1,8 @@
 "use client";
+import { Reply } from "@/components/Reply";
+
+import { comments } from "@/libs/comments";
+
 
 export default function HomePage() {
   return (
@@ -15,21 +19,21 @@ export default function HomePage() {
         <div className="vstack gap-3">
           <div className="d-flex align-items-center gap-3">
             <img
-              src="/profileImages/handsome.jpg"
+              src="/profileImages/me.jpg"
               width="48"
               height="48"
               className="rounded-circle"
               style={{ objectFit: "cover" }}
             />
             <span className="fw-semibold fs-5 text-white">
-              Chayanin Suatap 650610560
+              Wisarut Sada 630612110
             </span>
           </div>
 
           <span className="text-white">
             Quiz ง่ายจังเลยครับ ขอยาก ๆ กว่านี้ได้ไหม #261207
           </span>
-
+          {/*จำนวนกดไลค์ */}
           <div className="d-flex align-items-center gap-1">
             <img src="/like.svg" width={20}></img>
             <span style={{ color: "#B0B3B8" }}>100 คน</span>
@@ -88,6 +92,7 @@ export default function HomePage() {
         </div>
 
         {/* map-loop render Comment component here */}
+        
       </div>
     </div>
   );
